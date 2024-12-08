@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Http\Request;
@@ -21,3 +22,6 @@ Route::get('search/{name}',[StudentController::class,'searchStudent']);
 Route::delete('delete/{id}',[StudentController::class,'deleteStudent']);
 
 Route::resource('member',MemberController::class);
+
+
+Route::get('index',[ApiController::class,'index']);
